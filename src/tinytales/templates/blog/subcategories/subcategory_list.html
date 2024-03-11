@@ -1,0 +1,12 @@
+{% extends 'blogbase.html' %}
+
+{% block title %}Subcategories{% endblock title %}
+
+{% block content %}
+    <h2>Subcategories</h2>
+    <ul>
+        {% for subcategory in subcategories %}
+            <li><a href="{% url 'subcategory_detail' subcategory.pk %}">{{ subcategory.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

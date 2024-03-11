@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block title %}
+        My Blog
+      {% endblock %}
+    </title>
+    {% block extra_css %}
+
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/pico.min.css' %}" />
+  </head>
+  <body>
+    <header>
+      {% comment %} <h1><a href="{% url 'article_list' %}">Welcome</a></h1> {% endcomment %}
+      {% comment %} <nav>
+        <ul>
+          <li>
+            <a href="{% url 'category_list' %}">Home</a>
+          </li>
+          <li>
+            <a href="{% url 'subcategory_list' %}">Register</a>
+          </li>
+          <li>
+            <a href="{% url 'article_list' %}">LogIn</a>
+          </li>
+        </ul>
+      </nav> {% endcomment %}
+    </header>
+
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+
+    <footer>
+      <p>© 2024 My Blog</p>
+    </footer>
+
+    {% block extra_js %}
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ recipe.title }}{% endblock title %}
+
+{% block content %}
+    <article>
+        <h2>{{ recipe.title }}</h2>
+        <p><strong>Author:</strong> {{ recipe.author.email }}</p>
+        <p><strong>Preparation Time:</strong> {{ recipe.prep_time }} minutes</p>
+        <p><strong>Cooking Time:</strong> {{ recipe.cook_time }} minutes</p>
+        
+        <h3>Ingredients</h3>
+        <p>{{ recipe.ingredients }}</p>
+        
+        <h3>Instructions</h3>
+        <p>{{ recipe.instructions }}</p>
+        
+        <!-- Assuming you have images related to recipes -->
+        <h3>Images</h3>
+        <div>
+            {% for image in recipe.images.all %}
+                <img src="{{ image.image.url }}" alt="{{ image.caption }}" style="max-width: 100%; height: auto;">
+            {% endfor %}
+        </div>
+    </article>
+{% endblock content %}

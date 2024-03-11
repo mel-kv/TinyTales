@@ -1,0 +1,16 @@
+{% extends 'blogbase.html' %}
+
+{% block title %}{{ article.title }}{% endblock title %}
+
+{% block content %}
+    <article>
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.content }}</p>
+        <!-- Placeholder for images if applicable -->
+        <div>
+            {% for image in article.images.all %}
+                <img src="{{ image.image.url }}" alt="{{ image.caption }}">
+            {% endfor %}
+        </div>
+    </article>
+{% endblock content %}
