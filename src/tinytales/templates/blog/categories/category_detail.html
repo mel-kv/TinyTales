@@ -1,11 +1,18 @@
-{% extends 'blogbase.html' %}
+{% extends 'base.html' %}
+
+
 
 {% block title %}{{ category.name }}{% endblock title %}
 
 {% block content %}
     <h2>{{ category.name }}</h2>
     <p>{{ category.description }}</p>
-    <!-- Example for listing subcategories or articles -->
+    <img src="{{ category.image.url }}" alt="{{ category.name }}" class="blog-img-category">
+    <br>
+    
+
+    
+
     <h3>Subcategories</h3>
     <ul>
         {% for subcategory in category.subcategories.all %}

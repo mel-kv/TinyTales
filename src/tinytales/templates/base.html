@@ -13,32 +13,17 @@
 
     {% endblock %}
     <link rel="stylesheet" href="{% static 'css/pico.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/tiny.css' %}" />
   </head>
-  <body>
-    <header>
-      {% comment %} <h1><a href="{% url 'article_list' %}">Welcome</a></h1> {% endcomment %}
-      {% comment %} <nav>
-        <ul>
-          <li>
-            <a href="{% url 'category_list' %}">Home</a>
-          </li>
-          <li>
-            <a href="{% url 'subcategory_list' %}">Register</a>
-          </li>
-          <li>
-            <a href="{% url 'article_list' %}">LogIn</a>
-          </li>
-        </ul>
-      </nav> {% endcomment %}
-    </header>
-
+  <body class="container">
+    <header></header>
     <main>
       {% block content %}
       {% endblock %}
     </main>
 
-    <footer>
-      <p>© 2024 My Blog</p>
+    <footer id="main-footer">
+      <p>© 2024 Tiny Tales</p>
     </footer>
 
     {% block extra_js %}

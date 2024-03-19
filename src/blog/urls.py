@@ -14,6 +14,6 @@ urlpatterns = [
     ),
     path("articles/", ArticleListView.as_view(), name="article_list"),
     path("article/<int:pk>/", ArticleDetailView.as_view(), name="article_detail"),
-    
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+# ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

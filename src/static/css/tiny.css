@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  text-align: center;
+  clear: both;
+  position: relative;
+  height: 70px;
+}
+
+.blog-cat {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  flex-shrink: 1;
+}
+
+
+
+.blog-cat > li {
+  list-style: none;
+}
+
+.blog-cat-li {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-cat-img {
+  
+  max-height: 600px;
+  
+}
+
+
+.blog-cat-name {
+  text-align: center;
+  text-decoration: none;
+  font-size: larger;
+  
+ 
+  
+
+  
+}
