@@ -12,13 +12,17 @@
     {% block extra_css %}
 
     {% endblock %}
+
     <link rel="stylesheet" href="{% static 'css/pico.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/tiny.css' %}" />
   </head>
   <body class="container">
-    <header></header>
+    <header>
+      {% include 'tinytales/header.html' %}
+    </header>
     <main>
       {% block content %}
+
       {% endblock %}
     </main>
 
@@ -27,6 +31,7 @@
     </footer>
 
     {% block extra_js %}
+
     {% endblock %}
   </body>
 </html>

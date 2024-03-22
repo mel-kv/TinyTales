@@ -7,7 +7,7 @@ from .forms import SignUpForm, SignInForm
 
 
 def home(request):
-    return render(request, "users/home.html")
+    return render(request, "tinytales/home.html")
 
 
 class SignUpView(View):

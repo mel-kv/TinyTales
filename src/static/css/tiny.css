@@ -45,8 +45,11 @@ footer {
   text-decoration: none;
   font-size: larger;
   
- 
-  
-
-  
+}
+.choices {
+  display: flex;
+  justify-content: space-around;
+}
+.choices-img {
+  width: 400px;
 }
